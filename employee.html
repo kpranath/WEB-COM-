@@ -24,14 +24,10 @@
             var i;
             for (i in emp) {
                 var div = document.createElement("div");
+                // div.appendChild(document.createTextNode(emp[i].id));
                 div.appendChild(document.createTextNode(emp[i].name));
-                // div.appendChild(document.getElementById("id").innerHTML = emp[i].id);
-                // div.appendChild(document.getElementById("name").innerHTML = emp[i].name);
-                // div.appendChild(document.getElementById("role").innerHTML = emp[i].role);
+                // div.appendChild(document.createTextNode(emp[i].role));
                 document.getElementById("card").append(div);
-                // document.getElementById("id").innerHTML = emp[i].id;
-                // document.getElementById("name").innerHTML = emp[i].name;
-                // document.getElementById("role").innerHTML = emp[i].role;
                 console.log(emp[i].name);
             }
         }
