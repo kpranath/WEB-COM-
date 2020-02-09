@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>try</title>
+</head>
+
+<body>
+    <h1></h1> <!-- We are targeting this tag with JS. See code below -->
+    <input type="checkbox" id="number1" checked /><label for="number1">Agree</label>
+    <div id="container">
+        <p>Content</p>
+    </div>
+
+    <script type="text/javascript">
+        window.onload = function () {
+            var i;
+            for (i = 0; i < 3; i++) {
+                if (document.getElementById('number1').checked) {
+                    var h1 = document.createElement("h1");
+                    h1.appendChild(document.createTextNode("Hello member"));
+                    document.getElementById("container").append(h1);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
