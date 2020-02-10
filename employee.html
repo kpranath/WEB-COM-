@@ -10,25 +10,29 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body onload="showData()">
-    <div class="container">
-        <div class="jumbotron " id="card">
-        </div>
+    <div class="container" id="container">
+        <!-- <div class="jumbotron " id="card"> -->
+        <!-- </div> -->
     </div>
     <script src="employee.js"></script>
     <script>
         function showData() {
             var i;
-            for (i in emp) {
-                var div = document.createElement("div");
-                // div.appendChild(document.createTextNode(emp[i].id));
-                div.appendChild(document.createTextNode(emp[i].name));
-                // div.appendChild(document.createTextNode(emp[i].role));
-                document.getElementById("card").append(div);
-                console.log(emp[i].name);
+            for (i=0;i<emp.length;i++) {
+                // var div = document.createElement("div");
+                // // div.appendChild(document.createTextNode(emp[i].id));
+                // div.appendChild(document.createTextNode(emp[i].name));
+                // // div.appendChild(document.createTextNode(emp[i].role));
+                // document.getElementById("card").append(div);
+                $('#container').append(
+                    '<div id="r'+ i +'" class="jumbotron">'+emp[i].id+'<br/>'+emp[i].name+'<br/>'+emp[i].role+'</div>'
+                    )
+                // $('#container').append($('<div/>', { id: 'r' + i, 'class' : 'ansbox'}))
+                // console.log(emp[i].name);
             }
         }
     </script>

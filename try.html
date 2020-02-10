@@ -3,24 +3,28 @@
 
 <head>
     <title>try</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
     <h1></h1> <!-- We are targeting this tag with JS. See code below -->
-    <input type="checkbox" id="number1" checked /><label for="number1">Agree</label>
+    <!-- <input type="checkbox" id="number1" checked /><label for="number1">Agree</label> -->
     <div id="container">
-        <p>Content</p>
+        
     </div>
 
     <script type="text/javascript">
         window.onload = function () {
             var i;
-            for (i = 0; i < 3; i++) {
-                if (document.getElementById('number1').checked) {
-                    var h1 = document.createElement("h1");
-                    h1.appendChild(document.createTextNode("Hello member"));
-                    document.getElementById("container").append(h1);
-                }
+            // for (i = 0; i < 3; i++) {
+            //     if (document.getElementById('number1').checked) {
+            //         var h1 = document.createElement("h1");
+            //         h1.appendChild(document.createTextNode("Hello member"));
+            //         document.getElementById("container").append(h1);
+            //     }
+        // }
+            for(var i =1; i<= 10; i++){
+                $('#container').append('<div id="r'+ i +'" class="ansbox">Answer</div>')
             }
         }
     </script>

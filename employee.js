@@ -18,5 +18,10 @@ var emp = [
         id: 4,
         name: "Chandana",
         Role: "Tester",
+    },
+    {
+        id: 5,
+        name: "Pranath",
+        Role: "CEO",
     }
 ]
